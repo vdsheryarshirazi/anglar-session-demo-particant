@@ -1,0 +1,12 @@
+<form (submit)="showResult()">
+  <label for="name">
+    Name
+    <input type="text" name="name" (keyup)="update($event)" id="name" autocomplete="off" />
+  </label>
+  <br />
+  <label for="reverse-name">
+    Name reverse
+    <input type="text" name="reverse-name" [value]="name" readonly />
+  </label>
+  <button>Show</button>
+</form>

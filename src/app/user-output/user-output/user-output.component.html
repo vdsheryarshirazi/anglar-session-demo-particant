@@ -1,0 +1,5 @@
+<app-user-input (showName)="onShowOutput($event)"></app-user-input>
+<div *ngIf="showOutput">
+  <h2>Output</h2>
+  <p>{{ output }}</p>
+</div>
