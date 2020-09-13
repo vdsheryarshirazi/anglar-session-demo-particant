@@ -1,25 +1,31 @@
 <div class="pound">
-  <app-fish
-    [depth]="fishes[0].depth"
-    [src]="fishes[0].src"
-    [speed]="fishes[0].speed"
-    [name]="fishes[0].name"
-    [isSwimming]="fishes[0].swimming"
-  ></app-fish>
-  <app-fish
-    [depth]="fishes[1].depth"
-    [src]="fishes[1].src"
-    [speed]="fishes[1].speed"
-    [name]="fishes[1].name"
-    [isSwimming]="fishes[1].swimming"
-  ></app-fish>
-  <app-fish
-    [depth]="fishes[2].depth"
-    [src]="fishes[2].src"
-    [speed]="fishes[2].speed"
-    [name]="fishes[2].name"
-    [isSwimming]="fishes[2].swimming"
-  ></app-fish>
+  <div (click)="catchFish(0)" *ngIf="!fishes[0].caught">
+    <app-fish
+      [depth]="fishes[0].depth"
+      [src]="fishes[0].src"
+      [speed]="fishes[0].speed"
+      [name]="fishes[0].name"
+      [isSwimming]="fishes[0].swimming"
+    ></app-fish>
+  </div>
+  <div (click)="catchFish(1)" *ngIf="!fishes[1].caught">
+    <app-fish
+      [depth]="fishes[1].depth"
+      [src]="fishes[1].src"
+      [speed]="fishes[1].speed"
+      [name]="fishes[1].name"
+      [isSwimming]="fishes[1].swimming"
+    ></app-fish>
+  </div>
+  <div (click)="catchFish(2)" *ngIf="!fishes[2].caught">
+    <app-fish
+      [depth]="fishes[2].depth"
+      [src]="fishes[2].src"
+      [speed]="fishes[2].speed"
+      [name]="fishes[2].name"
+      [isSwimming]="fishes[2].swimming"
+    ></app-fish>
+  </div>
 </div>
 
 <div>
@@ -38,7 +44,7 @@
       <th scope="col">Speed +</th>
       <th scope="col">Speed -</th>
     </tr>
-    <tr>
+    <tr *ngIf="!fishes[0].caught">
       <td>
         <img
           [src]="'../../assets/' + fishes[0].src"
@@ -54,7 +60,7 @@
       <td><button (click)="incSpeed(0)">+</button></td>
       <td><button (click)="decSpeed(0)">-</button></td>
     </tr>
-    <tr>
+    <tr *ngIf="!fishes[1].caught">
       <td>
         <img
           [src]="'../../assets/' + fishes[1].src"
@@ -70,21 +76,21 @@
       <td><button (click)="incSpeed(1)">+</button></td>
       <td><button (click)="decSpeed(1)">-</button></td>
     </tr>
-    <tr>
+    <tr *ngIf="!fishes[2].caught">
       <td>
         <img
-          [src]="'../../assets/' + fishes[1].src"
-          [alt]="fishes[1].name"
+          [src]="'../../assets/' + fishes[2].src"
+          [alt]="fishes[2].name"
           width="51"
         />
       </td>
-      <td><button (click)="start(1)">start</button></td>
-      <td><button (click)="stop(1)">stop</button></td>
+      <td><button (click)="start(2)">start</button></td>
+      <td><button (click)="stop(2)">stop</button></td>
       <td>
-        {{ fishes[1].speed }}
+        {{ fishes[2].speed }}
       </td>
-      <td><button (click)="incSpeed(1)">+</button></td>
-      <td><button (click)="decSpeed(1)">-</button></td>
+      <td><button (click)="incSpeed(2)">+</button></td>
+      <td><button (click)="decSpeed(2)">-</button></td>
     </tr>
   </table>
 </div>
