@@ -1,0 +1,38 @@
+<!--
+  TODO:
+  use app-user component and pass following information:
+  1) ID
+  2) name
+  3) email
+  4) phone
+ -->
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td scope="row">{{ users[0].id }}</td>
+      <td><app-highlighter [content]="users[0].name"></app-highlighter></td>
+      <td>{{ users[0].email }}</td>
+      <td>{{ users[0].phone }}</td>
+    </tr>
+    <tr>
+      <td scope="row">{{ users[1].id }}</td>
+      <th>{{ users[1].name }}</th>
+      <td>{{ users[1].email }}</td>
+      <td>{{ users[1].phone }}</td>
+    </tr>
+    <tr>
+      <td scope="row">{{ users[2].id }}</td>
+      <th>{{ users[2].name }}</th>
+      <td>{{ users[2].email }}</td>
+      <td>{{ users[2].phone }}</td>
+    </tr>
+  </tbody>
+</table>

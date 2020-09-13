@@ -1,0 +1,46 @@
+<div class="card" style="width: 18rem">
+  <img class="card-img-top" src="http://via.placeholder.com/640x360" alt="user image" />
+  <div class="card-body">
+    <h5 class="card-title">user name</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Profession</h6>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <!--
+      TODO:
+      property bind link
+    -->
+    <a href="#" class="btn btn-primary">visit profile actual</a>
+    <blockquote class="blockquote mb-0">
+      <!--
+        TODO:
+        show dynamic value or show default value
+      -->
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+      <footer class="blockquote-footer">Someone famous in <cite title="Source Title">Source Title</cite></footer>
+    </blockquote>
+  </div>
+  <hr />
+  <div class="container my-3">
+    <button type="button" (click)="show()">show username</button>
+    <form (submit)="updateProfile($event)">
+      <div class="form-group">
+        <label for="username">by</label>
+        <!--
+          TODO:
+          1) pre populate by this user then interpolate into card
+          2) update username value (keyup)="update($event)"
+        -->
+        <input type="text" class="form-control" id="username" placeholder="Enter username" autocomplete="off" />
+      </div>
+      <div class="form-group">
+        <label for="quote">Quote</label>
+        <!--
+          TODO:
+          twoway data binding quote
+        -->
+        <textarea name="quote" class="form-control" id="quote" cols="30" rows="2"></textarea>
+        <small id="quoteHelp" class="form-text text-muted">Add your saying</small>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+  </div>
+</div>
