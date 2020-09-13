@@ -1,0 +1,23 @@
+<div style="border: '1px solid grey'; padding-left: 3rem">
+  <h4>Callee</h4>
+  <strong>name</strong>: {{ name }}<br />
+  <strong>number</strong>: {{ number }}<br />
+  <strong>duration</strong>: {{ duration }}<br />
+  <label>
+    Change Label
+    <input type="text" [(ngModel)]="name" name="name" />
+  </label>
+  <div
+    class="alert alert-success"
+    [ngClass]="{
+      'alert-success': direction === 'In',
+      'alert-danger': direction === 'Out'
+    }"
+    role="alert"
+  >
+    {{ direction }}
+    <button (click)="toggle()">
+      toggle {{ direction === "In" ? "<-" : "->" }}
+    </button>
+  </div>
+</div>
