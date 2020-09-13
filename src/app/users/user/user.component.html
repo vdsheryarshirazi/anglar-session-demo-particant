@@ -1,0 +1,10 @@
+<li class="list-group-item">
+  <div class="com-boundary my-3">{{ name }} is at {{ locationLoaded ? location.lat + ', ' + location.lng : 'unknown place' }}</div>
+  <ng-content></ng-content>
+  <!-- <div class="card w-25">
+    <form *ngIf="showForm">
+      <input type="text" #nameRef />
+    </form>
+    <button type="button" class="btn btn-primary" (click)="toggleForm($event)">{{ showForm ? 'hide' : 'show' }}</button>
+  </div> -->
+</li>

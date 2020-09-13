@@ -1,0 +1,7 @@
+a {
+  text-decoration: underline;
+  font-size: 3rem;
+  &:hover {
+    cursor: progress;
+  }
+}
