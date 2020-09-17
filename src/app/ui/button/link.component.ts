@@ -3,7 +3,13 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
 @Component({
   selector: 'app-link-component',
   template: `
-    <a [href]="href" (mouseenter)="onEnter($event)" (mouseleave)="onLeave($event)">{{ text }}</a> <br />
+    <a
+      [href]="href"
+      (mouseenter)="onEnter($event)"
+      (mouseleave)="onLeave($event)"
+      >{{ text }}</a
+    >
+    <br />
     <p *ngIf="description">{{ description }}</p>
   `,
   styleUrls: [`link.component.scss`],
@@ -12,7 +18,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   */
   // encapsulation: ViewEncapsulation.Emulated,
   /*
-    browser's native shadow: component style ✅ > global style ✅. override global style ❌
+    browser's native shadow: component style ✅ > global style ❌. override global style ❌
   */
   // encapsulation: ViewEncapsulation.ShadowDom,
   /*
