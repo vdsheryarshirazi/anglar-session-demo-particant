@@ -18,7 +18,7 @@ import { Component, Input, ViewEncapsulation } from '@angular/core';
   */
   // encapsulation: ViewEncapsulation.Emulated,
   /*
-    browser's native shadow: component style ✅ > global style ❌. override global style ❌
+    browser's native shadow: component style ✅. global style ❌. override global style ❌
   */
   // encapsulation: ViewEncapsulation.ShadowDom,
   /*
