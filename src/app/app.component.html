@@ -2,7 +2,12 @@
 <section>
   <h2>Part 1: (rubik's cube side)</h2>
   <div class="shade-container">
-    <div class="shade-box"></div>
+    <ng-container *ngFor="let s of shades; index as sIndex">
+      <div [style.background-color]="s.color" class="shade-box">
+        {{ sIndex + 1 }}
+      </div>
+      <br *ngIf="(sIndex + 1) % 3 === 0" />
+    </ng-container>
   </div>
 </section>
 
@@ -15,10 +20,12 @@
   </select>
 
   <div class="caesar-cipher">
-    <textarea name="textInput"></textarea>
+    <textarea name="textInput" [(ngModel)]="inputText"></textarea>
     <div class="direction">
-      <span>{{ encoding === true ? "➡️" : "⬅️" }}</span>
+      <span>{{ encoding === "true" ? "➡️" : "⬅️" }}</span>
     </div>
-    <textarea name="textOutput" disabled></textarea>
+    <textarea name="textOutput" disabled>{{
+      inputText | ceasarCipher: encoding
+    }}</textarea>
   </div>
 </section>
