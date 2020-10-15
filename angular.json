@@ -28,6 +28,7 @@
               "src/assets"
             ],
             "styles": [
+              "node_modules/bootstrap/dist/css/bootstrap.css",
               "src/styles.scss"
             ],
             "scripts": []
@@ -123,6 +124,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "angular-session-demo"
+    }
+  },
+  "defaultProject": "angular-session-demo",
+  "cli": {
+    "analytics": "9b5e7b3b-c1c4-45c1-96b2-fe9f21a9a769"
+  }
 }
