@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import {products, IProduct} from './data/products'
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-session-demo';
+  products: IProduct[] = [];
+  constructor() {
+    this.products = products;
+  }
 }
