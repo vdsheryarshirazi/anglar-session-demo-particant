@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "img": "https://s.cdpn.io/24822/sidebar-cupcake.png",
+    "name": "Cupcake",
+    "price": 4.9
+  },
+  {
+    "id": 2,
+    "img": "https://s.cdpn.io/24822/ponytails-coffee-time-coffee-cup3.png",
+    "name": "Coffee",
+    "price": 3.2
+  },
+  {
+    "id": 3,
+    "img": "https://s.cdpn.io/24822/Chocolate.png",
+    "name": "Chocolate",
+    "price": 6.2
+  },
+  {
+    "id": 4,
+    "img": "https://s.cdpn.io/24822/waffle-homestyle.png",
+    "name": "Waffle",
+    "price": 6.9
+  },
+  {
+    "id": 5,
+    "img": "https://s.cdpn.io/24822/donuts.jpg",
+    "name": "Donuts",
+    "price": 7.4
+  },
+  {
+    "id": 6,
+    "img": "https://s.cdpn.io/24822/raspberry-sorbet.gif",
+    "name": "Sorbet",
+    "price": 22
+  },
+  {
+    "id": 7,
+    "img": "https://s.cdpn.io/24822/tarte-au-citron.jpg",
+    "name": "Lemon Pie",
+    "price": 8
+  },
+  {
+    "id": 8,
+    "img": "https://s.cdpn.io/24822/Macaron.png",
+    "name": "Macaron",
+    "price": 2
+  },
+  {
+    "id": 9,
+    "img": "https://s.cdpn.io/24822/millefeuille-vanille.jpg",
+    "name": "Mille-feuille",
+    "price": 2
+  }
+]
