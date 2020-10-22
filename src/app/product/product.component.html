@@ -1,8 +1,9 @@
 <li class="product" data-price="4.9" data-quantity="2">
   <div class="product-preview">
-    <div class="thumbnail">
+    <!-- <div class="thumbnail">
       <img class="image" [src]="img" />
-    </div>
+    </div> -->
+    <app-product-item [src]="img"></app-product-item>
     <div class="product-paper">
       <div class="product-name">{{ name }}</div>
       <div class="product-price">{{ price | currency }}</div>
@@ -11,7 +12,7 @@
   <!-- <div class="product-quantity" *ngIf="quantity">x{{ quantity }}</div> -->
   <div class="product-quantity">x{{ quantity }}</div>
   <div class="product-interactions">
-    <div class="button plus">+</div>
+    <div class="button plus" (click)="add()">+</div>
     <div class="button minus">-</div>
     <div class="button del"></div>
   </div>

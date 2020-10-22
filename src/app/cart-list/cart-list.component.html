@@ -1,0 +1,14 @@
+<div class="cart-container" appHoverSlider>
+  <div class="empty" style="display: none">No more twinkies !</div>
+  <button (click)="getList()">get</button>
+  <ul class="cart" style="width: 100%; overflow: hidden">
+    <ng-container *ngFor="let product of list">
+      <app-product
+        [name]="product.name"
+        [price]="product.price"
+        [img]="product.img"
+        (addProduct)="addProduct(product)"
+      ></app-product>
+    </ng-container>
+  </ul>
+</div>
