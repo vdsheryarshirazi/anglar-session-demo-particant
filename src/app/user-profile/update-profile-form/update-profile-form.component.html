@@ -1,0 +1,25 @@
+<form [formGroup]="updateForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title>Login</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <mat-form-field class="full-width" appearance="fill" [floatLabel]="updateForm.controls?.firstName?.value">
+          <mat-label>First Name</mat-label>
+          <input matInput formControlName="firstName" placeholder="Email" />
+          <mat-error *ngIf="updateForm.controls['firstName'].hasError('required')"> Name is required </mat-error>
+        </mat-form-field>
+      </div>
+      <div *ngIf="error">
+        <mat-error>
+          {{ error }}
+        </mat-error>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit" [disabled]="fetching">{{ fetching ? 'Updating...' : 'Submit' }}</button>
+      <button mat-raised-button color="secondary" type="button" (click)="onClickCancel()">back</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

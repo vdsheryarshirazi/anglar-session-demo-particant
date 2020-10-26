@@ -29,6 +29,11 @@
           <mat-error *ngIf="loginForm.controls['password'].hasError('required')"> Password is required </mat-error>
         </mat-form-field>
       </div>
+      <div *ngIf="error">
+        <mat-error>
+          {{ error }}
+        </mat-error>
+      </div>
     </mat-card-content>
     <mat-card-actions>
       <button mat-raised-button color="primary" type="submit" [disabled]="fetching">{{ fetching ? 'Login in...' : 'Submit' }}</button>

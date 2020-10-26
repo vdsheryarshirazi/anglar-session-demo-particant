@@ -1,1 +1,9 @@
-<app-login-form></app-login-form>
+<app-login-form *ngIf="!isLoggedIn"></app-login-form>
+<ng-container *ngIf="isLoggedIn">
+  <ng-container *ngIf="showUpdate">
+    <app-update-profile-form (cancel)="hideUpdateForm()"></app-update-profile-form>
+  </ng-container>
+  <ng-container *ngIf="!showUpdate">
+    <app-user-dashboard (edit)="showUpdateForm()"></app-user-dashboard>
+  </ng-container>
+</ng-container>

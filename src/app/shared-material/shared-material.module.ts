@@ -7,26 +7,11 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [],
-  imports: [
-    CommonModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatCardModule,
-    MatIconModule,
-  ],
-  exports: [
-    CommonModule,
-    MatInputModule,
-    MatButtonModule,
-    MatSelectModule,
-    MatRadioModule,
-    MatCardModule,
-    MatIconModule,
-  ]
+  imports: [CommonModule, MatInputModule, MatButtonModule, MatSelectModule, MatRadioModule, MatCardModule, MatIconModule, MatListModule],
+  exports: [CommonModule, MatInputModule, MatButtonModule, MatSelectModule, MatRadioModule, MatCardModule, MatIconModule, MatListModule],
 })
-export class SharedMaterialModule { }
+export class SharedMaterialModule {}
